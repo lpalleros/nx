@@ -1,14 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Button } from '../Button/Button';
-// import wording from '../../api/api-wording/wording.json';
-// import Theme from "../../theme";
+import wording from '../../api/api-wording/wording.json';
 
 import { Logo } from '../../assets/index';
-
-import './header.css';
 
 interface HeaderProps {
     user?: () => void;
@@ -20,7 +16,7 @@ interface HeaderProps {
 const HeaderContainer = styled.div`
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 15px 20px;
+    padding: ${props => `${props.theme.spacing.small}`};
     display: flex;
     align-items: center;
     background-color: ${props => `${props.theme.colors.primary}`};
@@ -32,7 +28,7 @@ export const Header = (props: HeaderProps) => (
     <HeaderContainer>
       <div>
         <Logo />
-        <h1>titulo</h1>
+        <h1>{wording.header.title}</h1>
       </div>
       <div>
         {/* {true ? <LogoutButtons /> : <LoginButtons />} */}

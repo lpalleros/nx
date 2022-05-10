@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Theme from '../theme';
 import { Header } from '../components/Header/Header';
 
 export default {
@@ -11,7 +11,7 @@ export default {
   },
 };
 
-const Template = (args) => <Header {...args} />;
+const Template = (args) => <Theme><Header {...args} /></Theme>;
 
 export const Navbar = Template.bind({});
 // Navbar.args = {};

@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 const theme = {
     colors: {
         powderWhite: "#FFFDF9",
+        primary: '#FFFDF9',
         persianGreen: "#06B49A",
         lightBlue: "#AFDBD2",
         onyx: "#36313D"
@@ -13,6 +14,11 @@ const theme = {
         small: "1em",
         medium: "2em",
         large: "3em"
+    },
+    spacing: {
+        small: "1em",
+        medium: "2em",
+        large: "3em",
     }
 };
 

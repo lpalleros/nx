@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { ThemeProvider } from "styled-components";
+import Theme from "../theme";
 import NxWelcome from './nx-welcome';
 
 const theme = {
   colors: {
       powderWhite: "#FFFDF9",
-      primary: 'green',
+      primary: 'grey',
       persianGreen: "#06B49A",
       lightBlue: "#AFDBD2",
       onyx: "#36313D"
@@ -20,9 +20,9 @@ const theme = {
 
 export function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <Theme>
       <NxWelcome title="basics" />
-    </ThemeProvider>
+    </Theme>
   );
 }
 
