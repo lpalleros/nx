@@ -1,17 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Button } from '../Button/Button';
 import wording from '../../api/api-wording/wording.json';
-
 import { Logo } from '../../assets/index';
-
-interface HeaderProps {
-    user?: () => void;
-    onLogin?: () => void;
-    onLogout?: () => void;
-    onCreateAccounts?: () => void;
-}
 
 const HeaderContainer = styled.div`
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -19,19 +10,26 @@ const HeaderContainer = styled.div`
     padding: ${props => `${props.theme.spacing.small}`};
     display: flex;
     align-items: center;
-    background-color: ${props => `${props.theme.colors.primary}`};
     justify-content: space-between;
+    background: ${props => `${props.theme.colors.primary}`};
+    @media (min-width: ${props => `${props.theme.breakpoints.lg}`}) {
+      background: red;
+    }
+`;
+const Brand = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
-export const Header = (props: HeaderProps) => (
+export const Header = () => (
   <header>
     <HeaderContainer>
-      <div>
+      <Brand>
         <Logo />
         <h1>{wording.header.title}</h1>
-      </div>
+      </Brand>
       <div>
-        {/* {true ? <LogoutButtons /> : <LoginButtons />} */}
       </div>
     </HeaderContainer>
   </header>

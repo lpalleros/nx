@@ -1,30 +1,13 @@
-import React, { JSXElementConstructor } from "react";
-import { ThemeProvider } from "styled-components";
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
 
-const theme = {
-    colors: {
-        powderWhite: "#FFFDF9",
-        primary: '#FFFDF9',
-        persianGreen: "#06B49A",
-        lightBlue: "#AFDBD2",
-        onyx: "#36313D"
-    },
-    fonts: ["sans-serif", "Roboto"],
-    fontSizes: {
-        small: "1em",
-        medium: "2em",
-        large: "3em"
-    },
-    spacing: {
-        small: "1em",
-        medium: "2em",
-        large: "3em",
-    }
-};
+import { lightTheme } from "./lightTheme";
+import { darkTheme } from "./darkTheme";
+
+const theme = 'light';
 
 const Theme = ({children}:any):any => (
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeProvider theme={theme !== "light" ? lightTheme : darkTheme} >{children}</ThemeProvider>
 );
-
 
 export default Theme;
