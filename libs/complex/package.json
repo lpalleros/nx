@@ -6,6 +6,6 @@
     "test": "node index.js"
   },
   "dependencies": {
-    "@myorg/simple": "*"
+    "@nx-ds-mock/simple": "*"
   }
 }
