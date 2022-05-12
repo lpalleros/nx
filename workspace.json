@@ -2,6 +2,9 @@
   "version": 2,
   "projects": {
     "basics": "apps/basics",
-    "basics-e2e": "apps/basics-e2e"
+    "basics-e2e": "apps/basics-e2e",
+    "comple": "libs/comple",
+    "complex": "libs/complex",
+    "simple": "libs/simple"
   }
 }
