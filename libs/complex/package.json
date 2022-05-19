@@ -1,11 +1,12 @@
 {
   "name": "@nx-ds-mock/complex",
   "version": "0.0.0",
-  
   "scripts": {
     "test": "node index.js"
   },
   "dependencies": {
-    "@nx-ds-mock/simple": "*"
+    "@nx-ds-mock/simple": "*",
+    "moment": "^2.29.3",
+    "styled-components": "^5.3.5"
   }
 }
